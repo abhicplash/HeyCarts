@@ -6,8 +6,11 @@ function Home() {
   return (
     <>
       <Navbar />
+
       <main>
         <Hero />
+
+        {/* Next section will come here */}
       </main>
     </>
   );
