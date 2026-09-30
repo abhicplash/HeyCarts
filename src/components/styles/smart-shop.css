@@ -1,0 +1,351 @@
+.smart-shop {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #f7f4ee;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.smart-shop-container {
+  width: min(1500px, calc(100% - 72px));
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(420px, 0.82fr)
+    minmax(0, 1.18fr);
+
+  align-items: stretch;
+
+  gap: 0;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.smart-shop-copy {
+  position: relative;
+  z-index: 3;
+
+  max-width: 560px;
+
+  padding-right: 34px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smart-shop-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  color: #4c4c4c;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+}
+
+.smart-shop-copy h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(64px, 5.4vw, 94px);
+  font-weight: 500;
+
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+
+  color: #111111;
+}
+
+.smart-shop-copy h2 span {
+  color: #12b94f;
+}
+
+.smart-shop-copy p {
+  max-width: 480px;
+
+  margin-top: 26px;
+
+  color: #555555;
+
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.smart-shop-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  width: fit-content;
+
+  margin-top: 28px;
+
+  padding: 15px 22px;
+
+  border-radius: 999px;
+
+  background: #12b94f;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 12px 30px rgba(18, 185, 79, 0.16);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.smart-shop-link:hover {
+  transform: translateY(-3px);
+
+  background: #0da743;
+
+  box-shadow: 0 16px 36px rgba(18, 185, 79, 0.24);
+}
+
+/* =========================
+   RIGHT VISUAL
+========================= */
+
+.smart-shop-visual {
+  position: relative;
+
+  align-self: stretch;
+
+  /*
+    Extend to the actual right edge
+    of the browser instead of stopping
+    at the centered container.
+  */
+  width: calc(
+    100% +
+    max(
+      36px,
+      calc((100vw - 1500px) / 2)
+    )
+  );
+
+  height: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  overflow: hidden;
+}
+
+.smart-shop-visual img {
+  width: 145%;
+  max-width: none;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 77% center;
+}
+
+/* smooth transition into cream */
+
+.smart-shop-visual::after {
+  content: "";
+
+  position: absolute;
+  inset: 0 auto 0 0;
+
+  width: 115px;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    #f7f4ee 0%,
+    rgba(247, 244, 238, 0.72) 38%,
+    rgba(247, 244, 238, 0) 100%
+  );
+}
+
+/* =========================
+   LARGE LAPTOP
+========================= */
+
+@media (max-width: 1280px) {
+  .smart-shop-container {
+    width: calc(100% - 56px);
+  }
+
+  .smart-shop-copy h2 {
+    font-size: clamp(58px, 5.6vw, 82px);
+  }
+
+  .smart-shop-visual {
+    width: calc(100% + 28px);
+  }
+
+  .smart-shop-visual img {
+    width: 150%;
+    object-position: 78% center;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .smart-shop-container {
+    width: calc(100% - 40px);
+
+    grid-template-columns:
+      minmax(340px, 0.92fr)
+      minmax(0, 1.08fr);
+  }
+
+  .smart-shop-copy {
+    padding-right: 18px;
+  }
+
+  .smart-shop-copy h2 {
+    font-size: clamp(52px, 7vw, 70px);
+  }
+
+  .smart-shop-copy p {
+    font-size: 16px;
+  }
+
+  .smart-shop-visual {
+    width: calc(100% + 20px);
+  }
+
+  .smart-shop-visual img {
+    width: 155%;
+    object-position: 79% center;
+  }
+
+  .smart-shop-visual::after {
+    width: 85px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .smart-shop {
+    min-height: auto;
+  }
+
+  .smart-shop-container {
+    width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 28px;
+  }
+
+  .smart-shop-copy {
+    width: calc(100% - 32px);
+    max-width: none;
+
+    margin: 0 auto;
+
+    padding: 64px 0 0;
+
+    display: block;
+  }
+
+  .smart-shop-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+  }
+
+  .smart-shop-copy h2 {
+    font-size: clamp(48px, 13vw, 62px);
+  }
+
+  .smart-shop-copy p {
+    max-width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 16px;
+  }
+
+  .smart-shop-link {
+    margin-top: 23px;
+  }
+
+  .smart-shop-visual {
+    width: 100%;
+    height: 390px;
+  }
+
+  .smart-shop-visual::after {
+    display: none;
+  }
+
+  .smart-shop-visual img {
+    width: 150%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 76% center;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+  .smart-shop-copy {
+    width: calc(100% - 26px);
+
+    padding-top: 54px;
+  }
+
+  .smart-shop-copy h2 {
+    font-size: 44px;
+  }
+
+  .smart-shop-copy p {
+    font-size: 15px;
+  }
+
+  .smart-shop-visual {
+    height: 340px;
+  }
+
+  .smart-shop-visual img {
+    width: 160%;
+    object-position: 78% center;
+  }
+}

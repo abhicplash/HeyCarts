@@ -1,6 +1,6 @@
 import Navbar from "../common/Navbar";
 import Hero from "../home/Hero";
-
+import SmartShop from "../home/SmartShop";
 
 function Home() {
   return (
@@ -9,8 +9,7 @@ function Home() {
 
       <main>
         <Hero />
-
-        {/* Next section will come here */}
+        <SmartShop />
       </main>
     </>
   );
