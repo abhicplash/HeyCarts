@@ -1,0 +1,361 @@
+.final-cta {
+  position: relative;
+  width: 100%;
+  padding: 24px 34px;
+  background: #f7f4ee;
+  overflow: hidden;
+}
+
+/* =================================
+   SHELL
+================================= */
+
+.final-cta-shell {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #020806;
+}
+
+/* =================================
+   BACKGROUND
+================================= */
+
+.final-cta-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.final-cta-background img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 56% center;
+}
+
+.final-cta-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(1, 7, 4, 0.96) 0%,
+      rgba(1, 7, 4, 0.86) 28%,
+      rgba(1, 7, 4, 0.55) 48%,
+      rgba(1, 7, 4, 0.12) 72%,
+      rgba(1, 7, 4, 0) 100%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(18, 185, 79, 0.22),
+      transparent 35%
+    );
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.final-cta-content {
+  position: relative;
+  z-index: 3;
+
+  width: min(620px, 47%);
+
+  padding-top: 72px;
+  margin-left: 70px;
+}
+
+.final-cta-eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #34df7c;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+}
+
+.final-cta-content h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(54px, 4.8vw, 78px);
+  font-weight: 500;
+
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+
+  color: #ffffff;
+}
+
+.final-cta-content h2 span {
+  color: #35e07f;
+}
+
+.final-cta-content p {
+  max-width: 520px;
+
+  margin-top: 22px;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* =================================
+   ACTIONS
+================================= */
+
+.final-cta-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 26px;
+}
+
+.final-cta-primary,
+.final-cta-secondary {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 0 22px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.final-cta-primary {
+  background: #20dd72;
+  color: #04100a;
+}
+
+.final-cta-primary:hover {
+  transform: translateY(-3px);
+  background: #2de57e;
+}
+
+.final-cta-secondary {
+  border: 1px solid rgba(53, 224, 127, 0.75);
+
+  color: #ffffff;
+
+  background: rgba(2, 8, 6, 0.35);
+
+  backdrop-filter: blur(10px);
+}
+
+.final-cta-secondary:hover {
+  transform: translateY(-3px);
+  border-color: #35e07f;
+}
+
+.final-cta-play {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #050806;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+  .final-cta {
+    padding: 24px;
+  }
+
+  .final-cta-shell {
+    min-height: 780px;
+    border-radius: 24px;
+  }
+
+  .final-cta-background img {
+    object-position: 68% center;
+  }
+
+  .final-cta-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(1, 7, 4, 0.94) 0%,
+        rgba(1, 7, 4, 0.82) 38%,
+        rgba(1, 7, 4, 0.25) 67%,
+        rgba(1, 7, 4, 0.08) 100%
+      );
+  }
+
+  .final-cta-content {
+    width: min(650px, calc(100% - 80px));
+
+    padding-top: 58px;
+    margin-left: 40px;
+  }
+
+  .final-cta-content h2 {
+    font-size: clamp(52px, 7vw, 68px);
+  }
+
+  .final-cta-content p {
+    max-width: 520px;
+    font-size: 16px;
+  }
+
+  .final-cta-actions {
+    margin-top: 24px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 760px) {
+  .final-cta {
+    padding: 0;
+    background: #020806;
+  }
+
+  .final-cta-shell {
+    min-height: auto;
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+  }
+
+  .final-cta-content {
+    position: relative;
+
+    order: 1;
+
+    width: calc(100% - 32px);
+
+    padding: 58px 0 32px;
+
+    margin: 0 auto;
+  }
+
+  .final-cta-eyebrow {
+    margin-bottom: 17px;
+    font-size: 10px;
+  }
+
+  .final-cta-content h2 {
+    font-size: clamp(42px, 13vw, 56px);
+    line-height: 0.94;
+  }
+
+  .final-cta-content p {
+    max-width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .final-cta-actions {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 10px;
+
+    margin-top: 24px;
+  }
+
+  .final-cta-primary,
+  .final-cta-secondary {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 18px;
+  }
+
+  .final-cta-background {
+    position: relative;
+
+    order: 2;
+
+    width: 100%;
+    height: 350px;
+  }
+
+  .final-cta-background img {
+    object-position: 72% center;
+  }
+
+  .final-cta-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(2, 8, 6, 0) 0%,
+        rgba(2, 8, 6, 0.05) 52%,
+        #020806 100%
+      );
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 420px) {
+  .final-cta-content {
+    width: calc(100% - 28px);
+    padding-top: 52px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 40px;
+  }
+
+  .final-cta-content p {
+    font-size: 14px;
+  }
+
+  .final-cta-background {
+    height: 310px;
+  }
+
+  .final-cta-primary,
+  .final-cta-secondary {
+    min-height: 48px;
+    font-size: 14px;
+  }
+}

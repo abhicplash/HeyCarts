@@ -1,0 +1,497 @@
+.lifestyle-experience {
+  position: relative;
+  width: 100%;
+  padding: 24px 34px;
+  background: #f7f4ee;
+  overflow: hidden;
+}
+
+/* =================================
+   MAIN CINEMATIC PANEL
+================================= */
+
+.lifestyle-shell {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #050907;
+}
+
+/* =================================
+   BACKGROUND
+================================= */
+
+.lifestyle-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lifestyle-background img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: 54% center;
+}
+
+.lifestyle-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 7, 4, 0.92) 0%,
+      rgba(2, 7, 4, 0.78) 25%,
+      rgba(2, 7, 4, 0.42) 47%,
+      rgba(2, 7, 4, 0.08) 70%,
+      rgba(2, 7, 4, 0) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(2, 6, 4, 0.38) 0%,
+      rgba(2, 6, 4, 0) 38%
+    );
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.lifestyle-content {
+  position: relative;
+  z-index: 3;
+
+  width: min(520px, 42%);
+
+  padding-top: 64px;
+  margin-left: 70px;
+}
+
+.lifestyle-eyebrow {
+  display: block;
+
+  margin-bottom: 19px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+
+.lifestyle-content h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(52px, 4.5vw, 74px);
+  font-weight: 500;
+
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+
+  color: #ffffff;
+}
+
+.lifestyle-content h2 span {
+  color: #12b94f;
+}
+
+.lifestyle-content p {
+  max-width: 480px;
+
+  margin-top: 20px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* =================================
+   WATCH LINK
+================================= */
+
+.lifestyle-watch {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 19px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.lifestyle-watch:hover {
+  opacity: 0.82;
+  transform: translateX(3px);
+}
+
+.lifestyle-play {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  border: 2px solid #12b94f;
+
+  color: #12b94f;
+
+  background: rgba(3, 10, 6, 0.55);
+
+  backdrop-filter: blur(10px);
+}
+
+/* =================================
+   FEATURE BAR
+================================= */
+
+.lifestyle-features {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 60px;
+  right: 60px;
+  bottom: 18px;
+
+  width: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: rgba(2, 10, 6, 0.93);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2);
+}
+
+.lifestyle-feature {
+  position: relative;
+
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 13px 18px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lifestyle-feature:last-child {
+  border-right: 0;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+
+  color: #12b94f;
+}
+
+.feature-copy {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.feature-copy span {
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.3;
+}
+
+.feature-copy strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+.feature-arrow {
+  display: none;
+
+  margin-left: auto;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+  .lifestyle-experience {
+    padding: 24px;
+  }
+
+  .lifestyle-shell {
+    min-height: 780px;
+
+    border-radius: 24px;
+  }
+
+  .lifestyle-background img {
+    object-position: 62% center;
+  }
+
+  .lifestyle-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(2, 7, 4, 0.87) 0%,
+        rgba(2, 7, 4, 0.58) 43%,
+        rgba(2, 7, 4, 0.12) 70%,
+        rgba(2, 7, 4, 0.42) 100%
+      );
+  }
+
+  .lifestyle-content {
+    width: min(580px, calc(100% - 80px));
+
+    padding-top: 54px;
+
+    margin-left: 40px;
+  }
+
+  .lifestyle-content h2 {
+    font-size: clamp(50px, 7vw, 66px);
+  }
+
+  .lifestyle-content p {
+    max-width: 460px;
+
+    font-size: 16px;
+  }
+
+  .lifestyle-features {
+    left: 24px;
+    right: 24px;
+    bottom: 20px;
+
+    width: auto;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lifestyle-feature {
+    min-height: 74px;
+
+    padding: 13px 18px;
+  }
+
+  .lifestyle-feature:nth-child(2) {
+    border-right: 0;
+  }
+
+  .lifestyle-feature:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 760px) {
+  .lifestyle-experience {
+    padding: 0;
+
+    background: #050907;
+  }
+
+  .lifestyle-shell {
+    min-height: auto;
+
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lifestyle-content {
+    order: 1;
+
+    width: calc(100% - 32px);
+
+    padding: 58px 0 30px;
+
+    margin: 0 auto;
+  }
+
+  .lifestyle-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+  }
+
+  .lifestyle-content h2 {
+    font-size: clamp(42px, 13vw, 56px);
+
+    line-height: 0.94;
+  }
+
+  .lifestyle-content p {
+    max-width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 15px;
+  }
+
+  .lifestyle-watch {
+    margin-top: 22px;
+
+    font-size: 14px;
+  }
+
+  .lifestyle-play {
+    width: 44px;
+    height: 44px;
+  }
+
+  .lifestyle-background {
+    position: relative;
+
+    order: 2;
+
+    width: 100%;
+    height: 360px;
+  }
+
+  .lifestyle-background img {
+    object-position: 70% center;
+  }
+
+  .lifestyle-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 8, 5, 0.06) 0%,
+        rgba(3, 8, 5, 0.12) 58%,
+        #050907 100%
+      );
+  }
+
+  .lifestyle-features {
+    position: relative;
+
+    order: 3;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: calc(100% - 28px);
+
+    margin: 0 auto 44px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 16px;
+
+    background: #07110d;
+  }
+
+  .lifestyle-feature {
+    width: 100%;
+
+    min-height: 72px;
+
+    padding: 15px 18px;
+
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .lifestyle-feature:last-child {
+    border-bottom: 0;
+  }
+
+  .feature-copy {
+    flex: 1;
+  }
+
+  .feature-copy span,
+  .feature-copy strong {
+    font-size: 14px;
+  }
+
+  .feature-arrow {
+    display: block;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 420px) {
+  .lifestyle-content {
+    width: calc(100% - 28px);
+
+    padding-top: 52px;
+  }
+
+  .lifestyle-content h2 {
+    font-size: 40px;
+  }
+
+  .lifestyle-content p {
+    font-size: 14px;
+  }
+
+  .lifestyle-background {
+    height: 320px;
+  }
+
+  .lifestyle-features {
+    width: calc(100% - 24px);
+
+    margin-bottom: 40px;
+  }
+
+  .lifestyle-feature {
+    min-height: 70px;
+
+    padding: 14px 16px;
+  }
+}
