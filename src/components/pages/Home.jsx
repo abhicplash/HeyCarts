@@ -1,5 +1,6 @@
 import Navbar from "../common/Navbar";
 import Hero from "../home/Hero";
+import ShopperJourney from "../home/ShopperJourney";
 import SmartShop from "../home/SmartShop";
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <main>
         <Hero />
         <SmartShop />
+         <ShopperJourney />
       </main>
     </>
   );

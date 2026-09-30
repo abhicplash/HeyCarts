@@ -1,0 +1,506 @@
+.shopper-journey {
+  position: relative;
+  width: 100%;
+
+  padding: 92px 0 105px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(18, 185, 79, 0.22),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #07120e 0%,
+      #030806 55%,
+      #06150f 100%
+    );
+
+  color: #ffffff;
+}
+
+/* =================================
+   DESKTOP
+================================= */
+
+.journey-container {
+  width: min(1560px, calc(100% - 72px));
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 350px)
+    minmax(0, 1fr);
+
+  gap: 34px;
+
+  align-items: center;
+}
+
+/* =================================
+   INTRO
+================================= */
+
+.journey-heading {
+  max-width: 340px;
+  margin: 0;
+}
+
+.journey-eyebrow {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.24em;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.journey-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(58px, 4.5vw, 78px);
+  font-weight: 500;
+
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+
+  color: #ffffff;
+}
+
+.journey-heading h2 span {
+  color: #12b94f;
+}
+
+.journey-heading p {
+  max-width: 320px;
+
+  margin: 30px 0 0;
+
+  font-size: 17px;
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* =================================
+   STEPS
+================================= */
+
+.journey-steps {
+  position: relative;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 12px;
+
+  align-items: start;
+}
+
+/* =================================
+   TIMELINE
+================================= */
+
+.journey-line {
+  position: absolute;
+
+  left: 3.5%;
+  right: 3.5%;
+
+  top: 236px;
+
+  height: 2px;
+
+  z-index: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(18, 185, 79, 0.15),
+    #12b94f 10%,
+    #12b94f 90%,
+    rgba(18, 185, 79, 0.15)
+  );
+}
+
+/* =================================
+   STEP
+================================= */
+
+.journey-step {
+  position: relative;
+
+  min-width: 0;
+
+  z-index: 2;
+}
+
+/* =================================
+   IMAGE
+================================= */
+
+.journey-image {
+  position: relative;
+
+  width: 100%;
+  height: 220px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #06110c;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.journey-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.journey-step:hover .journey-image img {
+  transform: scale(1.025);
+}
+
+/* =================================
+   NUMBER
+================================= */
+
+.journey-number {
+  position: relative;
+
+  z-index: 4;
+
+  width: 48px;
+  height: 48px;
+
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 2px solid #12b94f;
+
+  background: #04100b;
+
+  color: #12b94f;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* =================================
+   TEXT
+================================= */
+
+.journey-step h3 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  color: #ffffff;
+}
+
+.journey-step > p {
+  margin: 0;
+
+  max-width: 185px;
+
+  font-size: 14px;
+  line-height: 1.48;
+
+  color: rgba(255, 255, 255, 0.54);
+}
+
+/* =================================
+   LARGE LAPTOP
+================================= */
+
+@media (max-width: 1350px) {
+  .journey-container {
+    width: calc(100% - 56px);
+
+    grid-template-columns:
+      290px
+      minmax(0, 1fr);
+
+    gap: 26px;
+  }
+
+  .journey-heading h2 {
+    font-size: clamp(54px, 4.7vw, 70px);
+  }
+
+  .journey-steps {
+    gap: 10px;
+  }
+
+  .journey-image {
+    height: 200px;
+  }
+
+  .journey-line {
+    top: 216px;
+  }
+
+  .journey-step h3 {
+    font-size: 17px;
+  }
+
+  .journey-step > p {
+    max-width: 175px;
+
+    font-size: 13px;
+  }
+}
+
+/* =================================
+   TABLET — 2 COLUMNS
+================================= */
+
+@media (max-width: 1100px) {
+  .shopper-journey {
+    padding: 84px 0 94px;
+  }
+
+  .journey-container {
+    width: calc(100% - 48px);
+
+    display: block;
+  }
+
+  .journey-heading {
+    max-width: 500px;
+
+    margin-bottom: 48px;
+  }
+
+  .journey-heading h2 {
+    font-size: clamp(52px, 7vw, 68px);
+  }
+
+  .journey-heading p {
+    max-width: 420px;
+  }
+
+  .journey-steps {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 44px 24px;
+  }
+
+  .journey-line {
+    display: none;
+  }
+
+  .journey-image {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 4 / 4.2;
+
+    border-radius: 18px;
+  }
+
+  .journey-number {
+    width: 44px;
+    height: 44px;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+  }
+
+  .journey-step h3 {
+    font-size: 19px;
+  }
+
+  .journey-step > p {
+    max-width: 300px;
+
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* =================================
+   MOBILE — ONE PER ROW
+================================= */
+
+@media (max-width: 760px) {
+  .shopper-journey {
+    padding: 68px 0 78px;
+  }
+
+  .journey-container {
+    width: calc(100% - 32px);
+
+    margin: 0 auto;
+  }
+
+  .journey-heading {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 38px;
+  }
+
+  .journey-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+  }
+
+  .journey-heading h2 {
+    font-size: clamp(44px, 13vw, 56px);
+
+    line-height: 0.94;
+  }
+
+  .journey-heading p {
+    max-width: 100%;
+
+    margin-top: 22px;
+
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .journey-steps {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 46px;
+
+    overflow: visible;
+
+    padding: 0;
+  }
+
+  .journey-line {
+    display: none;
+  }
+
+  .journey-step {
+    width: 100%;
+  }
+
+  .journey-image {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 4 / 4.15;
+
+    border-radius: 18px;
+  }
+
+  .journey-number {
+    width: 44px;
+    height: 44px;
+
+    margin-top: 12px;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+  }
+
+  .journey-step h3 {
+    margin-bottom: 8px;
+
+    font-size: 19px;
+  }
+
+  .journey-step > p {
+    max-width: 90%;
+
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 420px) {
+  .shopper-journey {
+    padding: 60px 0 70px;
+  }
+
+  .journey-container {
+    width: calc(100% - 28px);
+  }
+
+  .journey-heading {
+    margin-bottom: 34px;
+  }
+
+  .journey-heading h2 {
+    font-size: 42px;
+  }
+
+  .journey-heading p {
+    font-size: 14px;
+  }
+
+  .journey-steps {
+    gap: 40px;
+  }
+
+  .journey-image {
+    aspect-ratio: 4 / 4.2;
+  }
+
+  .journey-number {
+    width: 42px;
+    height: 42px;
+
+    margin-top: 10px;
+    margin-bottom: 13px;
+
+    font-size: 15px;
+  }
+
+  .journey-step h3 {
+    font-size: 18px;
+  }
+
+  .journey-step > p {
+    max-width: 94%;
+
+    font-size: 13.5px;
+  }
+}
