@@ -10,7 +10,6 @@ import ValueForEveryone from "../home/ValueForEveryone";
 function Home() {
   return (
     <>
-      <Navbar />
 
       <main>
         <Hero />
@@ -19,7 +18,6 @@ function Home() {
         <LifestyleExperience />
         <ValueForEveryone />
         <FinalCTA />
-        <Footer />
       </main>
     </>
   );
