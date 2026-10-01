@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 
 import "../styles/navbar.css";
 import logo from "../../assets/logos/heycartswhite.png";
@@ -9,10 +10,10 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { label: "Home", href: "#home" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Experience", href: "#experience" },
-    { label: "About", href: "#about" },
+    { label: "Home", to: "/" },
+    { label: "How It Works", to: "/how-it-works" },
+    { label: "Experience", to: "/#experience" },
+    { label: "About", to: "/#about" },
   ];
 
   return (
@@ -26,27 +27,29 @@ function Navbar() {
       }}
     >
       <div className="navbar-container">
-        <a href="#home" className="navbar-logo">
+        <Link to="/" className="navbar-logo">
           <img src={logo} alt="Hey!Carts" />
-        </a>
+        </Link>
 
         <nav className="navbar-links">
-          {links.map((link, index) => (
-            <a
+          {links.map((link) => (
+            <NavLink
               key={link.label}
-              href={link.href}
-              className={index === 0 ? "active" : ""}
+              to={link.to}
+              className={({ isActive }) =>
+                isActive ? "active" : ""
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
         <div className="navbar-actions">
-          <a href="#partner" className="navbar-cta">
+          <Link to="/#partner" className="navbar-cta">
             Partner With Us
             <ArrowRight size={17} />
-          </a>
+          </Link>
 
           <button
             className="menu-toggle"
@@ -70,23 +73,26 @@ function Navbar() {
             transition={{ duration: 0.22 }}
           >
             {links.map((link) => (
-              <a
+              <NavLink
                 key={link.label}
-                href={link.href}
+                to={link.to}
+                className={({ isActive }) =>
+                  isActive ? "active" : ""
+                }
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
 
-            <a
-              href="#partner"
+            <Link
+              to="/#partner"
               className="mobile-cta"
               onClick={() => setMenuOpen(false)}
             >
               Partner With Us
               <ArrowRight size={17} />
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
