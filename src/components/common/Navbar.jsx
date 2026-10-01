@@ -12,8 +12,8 @@ function Navbar() {
   const links = [
     { label: "Home", to: "/" },
     { label: "How It Works", to: "/how-it-works" },
-    { label: "Experience", to: "/#experience" },
-    { label: "About", to: "/#about" },
+    { label: "Experience", to: "/experience" },
+    { label: "About", to: "/about" },
   ];
 
   return (
