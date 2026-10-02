@@ -27,8 +27,7 @@ const steps = [
     number: "01",
     title: "Start Session",
     subtitle: "A simple beginning.",
-    text:
-      "Shoppers start a session directly from the trolley console. No personal details, just slide and start shopping.",
+    text: "Shoppers start a session directly from the trolley console. No personal details, just slide and start shopping.",
     image: startSession,
     icon: LogIn,
   },
@@ -36,8 +35,7 @@ const steps = [
     number: "02",
     title: "Discover",
     subtitle: "Products become easier to find.",
-    text:
-      "Explore categories, discover featured products and view relevant content while you shop.",
+    text: "Explore categories, discover featured products and view relevant content while you shop.",
     image: discover,
     icon: Search,
   },
@@ -45,8 +43,7 @@ const steps = [
     number: "03",
     title: "Offers",
     subtitle: "Relevant offers at the right moment.",
-    text:
-      "Get daily and weekly offers, brand promotions and personalised recommendations.",
+    text: "Get daily and weekly offers, brand promotions and personalised recommendations.",
     image: offers,
     icon: BadgePercent,
   },
@@ -54,8 +51,7 @@ const steps = [
     number: "04",
     title: "Scan",
     subtitle: "Interact with products instantly.",
-    text:
-      "Use the built-in camera to scan product barcodes and get more information, offers and suggestions.",
+    text: "Use the built-in camera to scan product barcodes and get more information, offers and suggestions.",
     image: scan,
     icon: ScanLine,
   },
@@ -63,8 +59,7 @@ const steps = [
     number: "05",
     title: "Play",
     subtitle: "Shopping becomes more engaging.",
-    text:
-      "Enjoy simple games like bubble pop and unlock a scratch-card reward each session.",
+    text: "Enjoy simple games like bubble pop and unlock a scratch-card reward each session.",
     image: play,
     icon: Gamepad2,
   },
@@ -72,8 +67,7 @@ const steps = [
     number: "06",
     title: "Reward",
     subtitle: "End the journey with value.",
-    text:
-      "Unlock rewards, offers or exclusive brand benefits before completing your shopping trip.",
+    text: "Unlock rewards, offers or exclusive brand benefits before completing your shopping trip.",
     image: reward,
     icon: Gift,
   },
@@ -103,9 +97,7 @@ function HowItWorks() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <span className="how-eyebrow">
-              HOW IT WORKS
-            </span>
+            <span className="how-eyebrow">HOW IT WORKS</span>
 
             <h1>
               One trolley.
@@ -140,9 +132,7 @@ function HowItWorks() {
             transition={{ duration: 0.7 }}
           >
             <div>
-              <span className="how-eyebrow">
-                THE SHOPPER JOURNEY
-              </span>
+              <span className="how-eyebrow">THE SHOPPER JOURNEY</span>
 
               <h2>
                 From first touch
@@ -180,14 +170,9 @@ function HowItWorks() {
                   }}
                 >
                   <div className="how-card-media">
-                    <img
-                      src={step.image}
-                      alt={`Hey!Carts ${step.title}`}
-                    />
+                    <img src={step.image} alt={`Hey!Carts ${step.title}`} />
 
-                    <span className="how-number">
-                      {step.number}
-                    </span>
+                    <span className="how-number">{step.number}</span>
                   </div>
 
                   <div className="how-card-content">
@@ -212,10 +197,7 @@ function HowItWorks() {
       <section className="how-closing">
         <div className="how-closing-shell">
           <div className="how-closing-bg">
-            <img
-              src={lifestyleImage}
-              alt="Shopper using Hey!Carts"
-            />
+            <img src={lifestyleImage} alt="Shopper using Hey!Carts" />
 
             <div className="how-closing-overlay" />
           </div>
@@ -238,8 +220,8 @@ function HowItWorks() {
             </h2>
 
             <p>
-              Hey!Carts adds digital engagement without changing the natural
-              way shoppers move through the store.
+              Hey!Carts adds digital engagement without changing the natural way
+              shoppers move through the store.
             </p>
 
             <a href="/#partner" className="how-button">

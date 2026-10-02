@@ -3,6 +3,8 @@ import Layout from "./components/layout/Layout";
 import Home from "./components/pages/Home";
 import HowItWorks from "./components/pages/HowItWorks";
 import Experience from "./components/pages/Experience";
+import About from "./components/pages/About";
+
 
 
 
@@ -14,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

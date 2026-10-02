@@ -1,0 +1,296 @@
+.about-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #020806;
+}
+
+/* =================================
+   BACKGROUND
+================================= */
+
+.about-hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.about-hero-background img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 70% center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(1, 8, 5, 0.99) 0%,
+      rgba(1, 8, 5, 0.96) 27%,
+      rgba(1, 8, 5, 0.78) 40%,
+      rgba(1, 8, 5, 0.38) 56%,
+      rgba(1, 8, 5, 0.08) 76%,
+      rgba(1, 8, 5, 0) 100%
+    );
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.about-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 600px;
+
+  padding-top: 205px;
+
+  margin-left: 72px;
+}
+
+.about-hero-eyebrow {
+  display: block;
+
+  margin-bottom: 24px;
+
+  color: #18df70;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.26em;
+}
+
+.about-hero-content h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(64px, 5.7vw, 92px);
+  font-weight: 500;
+
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+
+  color: #ffffff;
+}
+
+.about-hero-content h1 span {
+  color: #18df70;
+}
+
+.about-hero-content p {
+  max-width: 540px;
+
+  margin: 28px 0 30px;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* =================================
+   BUTTON
+================================= */
+
+.about-hero-button {
+  width: fit-content;
+
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 0 25px;
+
+  border-radius: 999px;
+
+  background: #19df70;
+  color: #031008;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-hero-button:hover {
+  transform: translateY(-2px);
+
+  background: #2be77e;
+}
+
+/* =================================
+   LAPTOP
+================================= */
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+  .about-hero-content {
+    width: 540px;
+
+    padding-top: 185px;
+
+    margin-left: 60px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 70px;
+  }
+
+  .about-hero-background img {
+    object-position: 72% center;
+  }
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+  .about-hero {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 88px;
+  }
+
+  .about-hero-content {
+    position: relative;
+
+    order: 1;
+
+    width: auto;
+
+    padding: 48px 44px 38px;
+
+    margin: 0;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(56px, 8vw, 74px);
+  }
+
+  .about-hero-content p {
+    max-width: 620px;
+  }
+
+  .about-hero-background {
+    position: relative;
+
+    order: 2;
+
+    width: 100%;
+    height: 500px;
+  }
+
+  .about-hero-background img {
+    object-position: 70% center;
+  }
+
+  .about-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        #020806 0%,
+        rgba(2, 8, 6, 0.44) 18%,
+        rgba(2, 8, 6, 0.08) 48%,
+        rgba(2, 8, 6, 0) 74%
+      );
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 760px) {
+  .about-hero {
+    padding-top: 72px;
+  }
+
+  .about-hero-content {
+    padding: 38px 20px 30px;
+  }
+
+  .about-hero-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 9px;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(44px, 13vw, 58px);
+
+    line-height: 0.94;
+  }
+
+  .about-hero-content p {
+    max-width: 100%;
+
+    margin: 22px 0 26px;
+
+    font-size: 14px;
+  }
+
+  .about-hero-button {
+    min-height: 50px;
+
+    padding: 0 20px;
+
+    font-size: 13px;
+  }
+
+  .about-hero-background {
+    height: 360px;
+  }
+
+  .about-hero-background img {
+    object-position: 68% center;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 420px) {
+  .about-hero-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .about-hero-background {
+    height: 320px;
+  }
+}

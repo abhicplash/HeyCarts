@@ -140,7 +140,7 @@
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: 58px;
+    font-size: 62px !important;
   font-weight: 500;
 
   line-height: 0.91;

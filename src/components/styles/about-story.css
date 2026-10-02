@@ -1,0 +1,319 @@
+.about-story {
+  width: 100%;
+
+  padding: 96px 0;
+
+  background:
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(18, 185, 79, 0.07),
+      transparent 30%
+    ),
+    #f7f4ee;
+}
+
+.about-story-container {
+  width: min(1450px, calc(100% - 72px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(500px, 0.95fr);
+
+  gap: 72px;
+
+  align-items: center;
+}
+
+/* =========================
+   COPY
+========================= */
+
+.about-story-copy {
+  max-width: 650px;
+}
+
+.about-story-eyebrow {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #12b94f;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+}
+
+.about-story-copy h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(58px, 5vw, 78px);
+  font-weight: 500;
+
+  line-height: 0.92;
+  letter-spacing: -0.052em;
+
+  color: #111111;
+}
+
+.about-story-copy h2 span {
+  color: #12b94f;
+}
+
+.about-story-intro {
+  max-width: 610px;
+
+  margin: 28px 0 0;
+
+  color: #5f5f5f;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   POINTS
+========================= */
+
+.about-story-points {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  margin-top: 42px;
+}
+
+.about-story-point {
+  position: relative;
+}
+
+.about-story-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border: 1px solid rgba(18, 185, 79, 0.18);
+
+  border-radius: 14px;
+
+  background: #eaf8ed;
+
+  color: #12b94f;
+}
+
+.about-story-point h3 {
+  margin: 0;
+
+  color: #161616;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+.about-story-point p {
+  margin: 8px 0 0;
+
+  color: #707070;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* =========================
+   VISUAL
+========================= */
+
+.about-story-visual {
+  position: relative;
+
+  width: 100%;
+  height: 560px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #e7e3da;
+}
+
+.about-story-visual img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+  .about-story {
+    padding: 82px 0;
+  }
+
+  .about-story-container {
+    width: calc(100% - 64px);
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(430px, 0.9fr);
+
+    gap: 52px;
+  }
+
+  .about-story-copy h2 {
+    font-size: 62px;
+  }
+
+  .about-story-visual {
+    height: 500px;
+  }
+
+  .about-story-points {
+    gap: 20px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .about-story {
+    padding: 78px 0;
+  }
+
+  .about-story-container {
+    width: calc(100% - 48px);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 48px;
+  }
+
+  .about-story-copy {
+    max-width: 760px;
+  }
+
+  .about-story-copy h2 {
+    font-size: clamp(54px, 8vw, 72px);
+  }
+
+  .about-story-intro {
+    max-width: 700px;
+  }
+
+  .about-story-visual {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .about-story {
+    padding: 64px 0;
+  }
+
+  .about-story-container {
+    width: calc(100% - 32px);
+
+    gap: 36px;
+  }
+
+  .about-story-eyebrow {
+    margin-bottom: 17px;
+
+    font-size: 9px;
+  }
+
+  .about-story-copy h2 {
+    font-size: clamp(43px, 12vw, 54px);
+
+    line-height: 0.94;
+  }
+
+  .about-story-intro {
+    margin-top: 22px;
+
+    font-size: 14px;
+  }
+
+  .about-story-points {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-top: 32px;
+  }
+
+  .about-story-point {
+    display: grid;
+
+    grid-template-columns: 48px minmax(0, 1fr);
+
+    column-gap: 14px;
+  }
+
+  .about-story-icon {
+    grid-row: 1 / span 2;
+
+    margin: 0;
+  }
+
+  .about-story-point h3 {
+    align-self: end;
+  }
+
+  .about-story-point p {
+    margin-top: 4px;
+  }
+
+  .about-story-visual {
+    height: 360px;
+
+    border-radius: 18px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+  .about-story-container {
+    width: calc(100% - 28px);
+  }
+
+  .about-story-copy h2 {
+    font-size: 41px;
+  }
+
+  .about-story-visual {
+    height: 320px;
+  }
+}

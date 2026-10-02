@@ -1,6 +1,7 @@
 .experience-page {
   width: 100%;
   overflow: hidden;
+
   background: #f7f4ee;
 }
 
@@ -15,17 +16,21 @@
 
 .experience-eyebrow {
   display: block;
+
   margin-bottom: 20px;
 
   color: #18df70;
 
   font-size: 10px;
   font-weight: 700;
+
   letter-spacing: 0.26em;
 }
 
-.experience-primary-button {
+.experience-primary-button,
+.experience-rewards-button {
   width: fit-content;
+
   min-height: 52px;
 
   display: inline-flex;
@@ -39,6 +44,7 @@
   border-radius: 999px;
 
   background: #19df70;
+
   color: #031008;
 
   font-size: 14px;
@@ -51,8 +57,10 @@
     background 0.25s ease;
 }
 
-.experience-primary-button:hover {
+.experience-primary-button:hover,
+.experience-rewards-button:hover {
   transform: translateY(-2px);
+
   background: #2be77e;
 }
 
@@ -62,7 +70,9 @@
 
 .experience-hero {
   position: relative;
+
   width: 100%;
+
   background: #020806;
 }
 
@@ -79,6 +89,7 @@
 
 .experience-hero-background {
   position: absolute;
+
   inset: 0;
 
   width: 100%;
@@ -97,6 +108,7 @@
 
 .experience-hero-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -113,11 +125,13 @@
 
 .experience-hero-content {
   position: relative;
+
   z-index: 3;
 
   width: 560px;
 
   padding-top: 190px;
+
   margin-left: 72px;
 }
 
@@ -151,11 +165,12 @@
 }
 
 /* =========================================================
-   VALUE SECTION
+   VALUE
 ========================================================= */
 
 .experience-value {
   position: relative;
+
   width: 100%;
 
   padding: 88px 0 96px;
@@ -183,10 +198,6 @@
   align-items: end;
 
   margin-bottom: 54px;
-}
-
-.experience-value-heading .experience-eyebrow {
-  margin-bottom: 20px;
 }
 
 .experience-value-heading h2 {
@@ -219,7 +230,7 @@
 }
 
 /* =========================================================
-   AUDIENCE GRID
+   AUDIENCE
 ========================================================= */
 
 .experience-audience-grid {
@@ -302,20 +313,20 @@
   border-radius: 17px;
 
   background: #1cdf70;
-  color: #031008;
 
-  box-shadow:
-    0 10px 28px rgba(18, 185, 79, 0.2);
+  color: #031008;
 }
 
 .experience-audience-eyebrow {
   display: block;
+
   margin-bottom: 8px;
 
   color: #7c7c7c;
 
   font-size: 9px;
   font-weight: 700;
+
   letter-spacing: 0.2em;
 }
 
@@ -342,8 +353,6 @@
   font-size: 13px;
   line-height: 1.55;
 }
-
-/* BENEFITS */
 
 .experience-benefits {
   display: flex;
@@ -378,6 +387,7 @@
   border-radius: 50%;
 
   background: #e9f9ee;
+
   color: #12b94f;
 }
 
@@ -391,13 +401,13 @@
 }
 
 /* =========================================================
-   INTERACTIVE SHOPPING — COMPACT
+   INTERACTIVE
 ========================================================= */
 
 .experience-interactive {
   width: 100%;
 
-  padding: 18px 28px;
+  padding: 18px 28px 6px;
 
   background: #f7f4ee;
 }
@@ -406,8 +416,8 @@
   position: relative;
 
   width: 100%;
-  height: 440px;
-  min-height: 440px;
+
+  height: 500px;
 
   display: grid;
 
@@ -426,13 +436,12 @@
   background: #020806;
 }
 
-/* COPY */
-
 .experience-interactive-copy {
   position: relative;
+
   z-index: 2;
 
-  padding: 36px 0 36px 48px;
+  padding: 34px 0 34px 48px;
 }
 
 .experience-interactive-copy h2 {
@@ -464,13 +473,11 @@
   line-height: 1.5;
 }
 
-/* FEATURE LIST */
-
 .experience-feature-list {
   display: flex;
   flex-direction: column;
 
-  gap: 8px;
+  gap: 7px;
 
   max-width: 470px;
 }
@@ -487,7 +494,7 @@
 
   align-items: center;
 
-  padding: 9px 12px;
+  padding: 8px 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
@@ -496,19 +503,6 @@
   background: rgba(255, 255, 255, 0.03);
 
   color: #ffffff;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
-}
-
-.experience-feature-row:hover {
-  transform: translateX(4px);
-
-  border-color: rgba(24, 223, 112, 0.3);
-
-  background: rgba(24, 223, 112, 0.05);
 }
 
 .experience-feature-row > svg:first-child {
@@ -520,6 +514,7 @@
   border-radius: 10px;
 
   background: #18df70;
+
   color: #031008;
 }
 
@@ -548,13 +543,10 @@
   line-height: 1.3;
 }
 
-/* VISUAL */
-
 .experience-interactive-visual {
   position: relative;
 
-  height: 440px;
-  min-height: 440px;
+  height: 500px;
 
   overflow: hidden;
 }
@@ -569,24 +561,121 @@
   object-position: center 42%;
 }
 
-.experience-interactive-visual::before {
-  content: "";
+/* =========================================================
+   REWARDS — NEW DARK MATCHING DESIGN
+========================================================= */
 
+.experience-rewards {
+  width: 100%;
+
+  padding: 6px 28px 28px;
+
+  background: #f7f4ee;
+}
+
+.experience-rewards-shell {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #020806;
+}
+
+.experience-rewards-background {
   position: absolute;
+
   inset: 0;
 
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
 
-  pointer-events: none;
+.experience-rewards-background img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* dark cinematic left blend */
+
+.experience-rewards-overlay {
+  position: absolute;
+
+  inset: 0;
 
   background:
     linear-gradient(
       90deg,
-      #020806 0%,
-      rgba(2, 8, 6, 0.35) 10%,
-      rgba(2, 8, 6, 0.03) 28%,
-      rgba(2, 8, 6, 0) 45%
+      rgba(1, 8, 5, 0.99) 0%,
+      rgba(1, 8, 5, 0.98) 24%,
+      rgba(1, 8, 5, 0.91) 36%,
+      rgba(1, 8, 5, 0.65) 47%,
+      rgba(1, 8, 5, 0.23) 60%,
+      rgba(1, 8, 5, 0) 74%
     );
+}
+
+.experience-rewards-copy {
+  position: relative;
+
+  z-index: 3;
+
+  width: 520px;
+
+  padding-top: 74px;
+
+  margin-left: 48px;
+}
+
+.experience-rewards-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #18df70;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+}
+
+.experience-rewards-copy h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 64px;
+  font-weight: 500;
+
+  line-height: 0.91;
+  letter-spacing: -0.052em;
+
+  color: #ffffff;
+}
+
+.experience-rewards-copy h2 span {
+  color: #18df70;
+}
+
+.experience-rewards-copy p {
+  max-width: 440px;
+
+  margin: 22px 0 26px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 /* =========================================================
@@ -598,12 +687,11 @@
     width: calc(100% - 64px);
   }
 
-  /* HERO */
-
   .experience-hero-content {
     width: 500px;
 
     padding-top: 175px;
+
     margin-left: 60px;
   }
 
@@ -611,18 +699,8 @@
     font-size: 68px;
   }
 
-  .experience-hero-background img {
-    object-position: 70% center;
-  }
-
-  /* VALUE */
-
   .experience-value {
     padding: 76px 0 84px;
-  }
-
-  .experience-value-heading {
-    margin-bottom: 46px;
   }
 
   .experience-value-heading h2 {
@@ -633,42 +711,32 @@
     height: 220px;
   }
 
-  .experience-audience-body {
-    padding: 40px 24px 26px;
-  }
-
-  .experience-audience-icon {
-    left: 24px;
-  }
-
-  .experience-audience-body h3 {
-    font-size: 31px;
-  }
-
-  /* INTERACTIVE */
-
-  .experience-interactive {
-    padding: 16px 24px;
-  }
-
   .experience-interactive-shell {
-    height: 420px;
-    min-height: 420px;
-
-    gap: 24px;
-  }
-
-  .experience-interactive-copy {
-    padding: 32px 0 32px 42px;
-  }
-
-  .experience-interactive-copy h2 {
-    font-size: 46px;
+    height: 480px;
   }
 
   .experience-interactive-visual {
-    height: 420px;
-    min-height: 420px;
+    height: 480px;
+  }
+
+  .experience-rewards {
+    padding: 16px 24px 24px;
+  }
+
+  .experience-rewards-shell {
+    height: 470px;
+  }
+
+  .experience-rewards-copy {
+    width: 470px;
+
+    padding-top: 66px;
+
+    margin-left: 42px;
+  }
+
+  .experience-rewards-copy h2 {
+    font-size: 58px;
   }
 }
 
@@ -693,8 +761,6 @@
   }
 
   .experience-hero-content {
-    position: relative;
-
     order: 1;
 
     width: auto;
@@ -704,64 +770,22 @@
     margin: 0;
   }
 
-  .experience-hero-content h1 {
-    font-size: clamp(56px, 8vw, 74px);
-  }
-
-  .experience-hero-content p {
-    max-width: 600px;
-  }
-
   .experience-hero-background {
     position: relative;
 
     order: 2;
 
-    width: 100%;
     height: 480px;
-  }
-
-  .experience-hero-background img {
-    object-position: 68% center;
-  }
-
-  .experience-hero-overlay {
-    background:
-      linear-gradient(
-        180deg,
-        #020806 0%,
-        rgba(2, 8, 6, 0.48) 17%,
-        rgba(2, 8, 6, 0.08) 48%,
-        rgba(2, 8, 6, 0) 72%
-      );
   }
 
   /* VALUE */
 
-  .experience-value {
-    padding: 76px 0 84px;
-  }
-
   .experience-value-heading {
     display: block;
-
-    margin-bottom: 46px;
-  }
-
-  .experience-value-heading h2 {
-    font-size: clamp(54px, 8vw, 72px);
-  }
-
-  .experience-value-heading > p {
-    max-width: 570px;
-
-    margin-top: 22px;
   }
 
   .experience-audience-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 22px;
   }
 
   .experience-audience-card:last-child {
@@ -772,10 +796,6 @@
     justify-self: center;
   }
 
-  .experience-audience-image {
-    height: 235px;
-  }
-
   /* INTERACTIVE */
 
   .experience-interactive {
@@ -784,14 +804,11 @@
 
   .experience-interactive-shell {
     height: auto;
-    min-height: auto;
 
     display: flex;
     flex-direction: column;
 
     gap: 0;
-
-    border-radius: 22px;
   }
 
   .experience-interactive-copy {
@@ -800,29 +817,47 @@
     padding: 48px 38px 30px;
   }
 
-  .experience-interactive-copy h2 {
-    font-size: clamp(48px, 7vw, 62px);
-  }
-
-  .experience-feature-list {
-    max-width: 100%;
-  }
-
   .experience-interactive-visual {
     width: 100%;
-
     height: 330px;
-    min-height: 330px;
   }
 
-  .experience-interactive-visual::before {
+  /* REWARDS */
+
+  .experience-rewards {
+    padding: 20px 24px 24px;
+  }
+
+  .experience-rewards-shell {
+    height: 500px;
+  }
+
+  .experience-rewards-background img {
+    object-position: 62% center;
+  }
+
+  .experience-rewards-overlay {
     background:
       linear-gradient(
-        180deg,
-        #020806 0%,
-        rgba(2, 8, 6, 0.28) 12%,
-        rgba(2, 8, 6, 0) 35%
+        90deg,
+        rgba(1, 8, 5, 0.99) 0%,
+        rgba(1, 8, 5, 0.95) 38%,
+        rgba(1, 8, 5, 0.65) 55%,
+        rgba(1, 8, 5, 0.15) 76%,
+        rgba(1, 8, 5, 0) 100%
       );
+  }
+
+  .experience-rewards-copy {
+    width: 460px;
+
+    padding-top: 72px;
+
+    margin-left: 38px;
+  }
+
+  .experience-rewards-copy h2 {
+    font-size: 56px;
   }
 }
 
@@ -845,40 +880,12 @@
     padding: 38px 20px 30px;
   }
 
-  .experience-eyebrow {
-    margin-bottom: 16px;
-
-    font-size: 9px;
-  }
-
   .experience-hero-content h1 {
     font-size: clamp(44px, 13vw, 58px);
-
-    line-height: 0.94;
-  }
-
-  .experience-hero-content p {
-    max-width: 100%;
-
-    margin: 22px 0 26px;
-
-    font-size: 14px;
-  }
-
-  .experience-primary-button {
-    min-height: 49px;
-
-    padding: 0 20px;
-
-    font-size: 13px;
   }
 
   .experience-hero-background {
     height: 360px;
-  }
-
-  .experience-hero-background img {
-    object-position: 70% center;
   }
 
   /* VALUE */
@@ -887,71 +894,18 @@
     padding: 64px 0 72px;
   }
 
-  .experience-value-heading {
-    margin-bottom: 36px;
-  }
-
-  .experience-value-heading .experience-eyebrow {
-    margin-bottom: 16px;
-  }
-
   .experience-value-heading h2 {
     font-size: clamp(43px, 12vw, 54px);
-
-    line-height: 0.94;
-  }
-
-  .experience-value-heading > p {
-    margin-top: 18px;
-
-    font-size: 14px;
   }
 
   .experience-audience-grid {
     grid-template-columns: 1fr;
-
-    gap: 20px;
   }
 
   .experience-audience-card:last-child {
     grid-column: auto;
 
     width: 100%;
-  }
-
-  .experience-audience-image {
-    height: 220px;
-  }
-
-  .experience-audience-body {
-    padding: 38px 22px 26px;
-  }
-
-  .experience-audience-icon {
-    top: -28px;
-    left: 22px;
-
-    width: 56px;
-    height: 56px;
-  }
-
-  .experience-audience-body h3 {
-    font-size: 31px;
-  }
-
-  .experience-audience-description {
-    min-height: 0;
-
-    font-size: 13px;
-  }
-
-  .experience-benefits {
-    margin-top: 20px;
-    padding-top: 19px;
-  }
-
-  .experience-benefit strong {
-    font-size: 12.5px;
   }
 
   /* INTERACTIVE */
@@ -974,41 +928,74 @@
     font-size: clamp(40px, 11vw, 50px);
   }
 
-  .experience-interactive-copy > p {
-    margin: 16px 0 20px;
+  .experience-interactive-visual {
+    height: 260px;
+  }
+
+  /* REWARDS */
+
+  .experience-rewards {
+    padding: 0;
+
+    background: #020806;
+  }
+
+  .experience-rewards-shell {
+    height: 610px;
+
+    border-radius: 0;
+  }
+
+  .experience-rewards-background img {
+    object-position: 68% bottom;
+  }
+
+  .experience-rewards-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(1, 8, 5, 1) 0%,
+        rgba(1, 8, 5, 0.98) 34%,
+        rgba(1, 8, 5, 0.74) 49%,
+        rgba(1, 8, 5, 0.14) 68%,
+        rgba(1, 8, 5, 0) 82%
+      );
+  }
+
+  .experience-rewards-copy {
+    width: calc(100% - 40px);
+
+    padding-top: 52px;
+
+    margin: 0 auto;
+  }
+
+  .experience-rewards-eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+  }
+
+  .experience-rewards-copy h2 {
+    font-size: clamp(43px, 12vw, 54px);
+
+    line-height: 0.94;
+  }
+
+  .experience-rewards-copy p {
+    max-width: 100%;
+
+    margin: 18px 0 22px;
 
     font-size: 13px;
   }
 
-  .experience-feature-row {
-    grid-template-columns:
-      36px
-      minmax(0, 1fr)
-      18px;
+  .experience-rewards-button {
+    min-height: 48px;
 
-    padding: 9px 11px;
+    padding: 0 20px;
 
-    border-radius: 12px;
-  }
-
-  .experience-feature-row > svg:first-child {
-    width: 36px;
-    height: 36px;
-
-    padding: 8px;
-  }
-
-  .experience-feature-row strong {
-    font-size: 12px;
-  }
-
-  .experience-feature-row span {
-    font-size: 10px;
-  }
-
-  .experience-interactive-visual {
-    height: 260px;
-    min-height: 260px;
+    font-size: 13px;
   }
 }
 
@@ -1020,8 +1007,6 @@
   .experience-container {
     width: calc(100% - 28px);
   }
-
-  /* HERO */
 
   .experience-hero-content {
     padding-left: 16px;
@@ -1036,26 +1021,9 @@
     height: 320px;
   }
 
-  /* VALUE */
-
   .experience-value-heading h2 {
     font-size: 41px;
   }
-
-  .experience-audience-image {
-    height: 195px;
-  }
-
-  .experience-audience-body {
-    padding-left: 19px;
-    padding-right: 19px;
-  }
-
-  .experience-audience-icon {
-    left: 19px;
-  }
-
-  /* INTERACTIVE */
 
   .experience-interactive-copy {
     padding-left: 16px;
@@ -1066,8 +1034,17 @@
     font-size: 40px;
   }
 
-  .experience-interactive-visual {
-    height: 240px;
-    min-height: 240px;
+  .experience-rewards-shell {
+    height: 580px;
+  }
+
+  .experience-rewards-copy {
+    width: calc(100% - 32px);
+
+    padding-top: 46px;
+  }
+
+  .experience-rewards-copy h2 {
+    font-size: 41px;
   }
 }

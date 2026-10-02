@@ -23,8 +23,10 @@ import supermarketsImage from "../../assets/images/value/supermarkets.png";
 import brandsImage from "../../assets/images/value/brands.png";
 
 import discover from "../../assets/images/journey/discover.png";
+import rewardsExperience from "../../assets/images/experience/rewards-experience.png";
 
 import "../styles/experience.css";
+import FinalCTA from "../home/FinalCTA";
 
 const audiences = [
   {
@@ -49,6 +51,7 @@ const audiences = [
       },
     ],
   },
+
   {
     title: "Supermarkets",
     eyebrow: "A SMARTER STORE EXPERIENCE",
@@ -71,6 +74,7 @@ const audiences = [
       },
     ],
   },
+
   {
     title: "Brands",
     eyebrow: "BE PART OF THE JOURNEY",
@@ -98,9 +102,9 @@ const audiences = [
 function Experience() {
   return (
     <main className="experience-page">
-      {/* =================================
+      {/* =====================================================
           HERO
-      ================================= */}
+      ===================================================== */}
 
       <section className="experience-hero" id="experience">
         <div className="experience-hero-shell">
@@ -122,9 +126,7 @@ function Experience() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <span className="experience-eyebrow">
-              EXPERIENCE
-            </span>
+            <span className="experience-eyebrow">EXPERIENCE</span>
 
             <h1>
               A smarter
@@ -140,10 +142,7 @@ function Experience() {
               supermarkets and brands.
             </p>
 
-            <a
-              href="#experience-value"
-              className="experience-primary-button"
-            >
+            <a href="#experience-value" className="experience-primary-button">
               See It In Action
               <ArrowRight size={17} />
             </a>
@@ -151,14 +150,11 @@ function Experience() {
         </div>
       </section>
 
-      {/* =================================
-          VALUE FOR EVERYONE
-      ================================= */}
+      {/* =====================================================
+          VALUE
+      ===================================================== */}
 
-      <section
-        className="experience-value"
-        id="experience-value"
-      >
+      <section className="experience-value" id="experience-value">
         <div className="experience-container">
           <motion.div
             className="experience-value-heading"
@@ -171,9 +167,7 @@ function Experience() {
             }}
           >
             <div>
-              <span className="experience-eyebrow">
-                BUILT FOR EVERYONE
-              </span>
+              <span className="experience-eyebrow">BUILT FOR EVERYONE</span>
 
               <h2>
                 Creating value
@@ -238,15 +232,10 @@ function Experience() {
                             key={benefit.title}
                           >
                             <span>
-                              <BenefitIcon
-                                size={17}
-                                strokeWidth={2}
-                              />
+                              <BenefitIcon size={17} strokeWidth={2} />
                             </span>
 
-                            <strong>
-                              {benefit.title}
-                            </strong>
+                            <strong>{benefit.title}</strong>
                           </div>
                         );
                       })}
@@ -259,9 +248,9 @@ function Experience() {
         </div>
       </section>
 
-      {/* =================================
+      {/* =====================================================
           INTERACTIVE SHOPPING
-      ================================= */}
+      ===================================================== */}
 
       <section className="experience-interactive">
         <div className="experience-interactive-shell">
@@ -275,9 +264,7 @@ function Experience() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <span className="experience-eyebrow">
-              INTERACTIVE SHOPPING
-            </span>
+            <span className="experience-eyebrow">INTERACTIVE SHOPPING</span>
 
             <h2>
               Every step brings
@@ -297,9 +284,7 @@ function Experience() {
 
                 <div>
                   <strong>Browse Products</strong>
-                  <span>
-                    Explore categories and featured products.
-                  </span>
+                  <span>Explore categories and featured products.</span>
                 </div>
 
                 <ArrowRight size={17} />
@@ -310,9 +295,7 @@ function Experience() {
 
                 <div>
                   <strong>View Offers</strong>
-                  <span>
-                    Discover daily and weekly promotions.
-                  </span>
+                  <span>Discover daily and weekly promotions.</span>
                 </div>
 
                 <ArrowRight size={17} />
@@ -323,9 +306,7 @@ function Experience() {
 
                 <div>
                   <strong>Interactive Ads</strong>
-                  <span>
-                    See relevant brand content during the trip.
-                  </span>
+                  <span>See relevant brand content during the trip.</span>
                 </div>
 
                 <ArrowRight size={17} />
@@ -336,9 +317,7 @@ function Experience() {
 
                 <div>
                   <strong>Play & Win</strong>
-                  <span>
-                    Enjoy simple games and unlock rewards.
-                  </span>
+                  <span>Enjoy simple games and unlock rewards.</span>
                 </div>
 
                 <ArrowRight size={17} />
@@ -357,13 +336,11 @@ function Experience() {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <img
-              src={discover}
-              alt="Hey!Carts product discovery interface"
-            />
+            <img src={discover} alt="Hey!Carts product discovery interface" />
           </motion.div>
         </div>
       </section>
+       <FinalCTA />
     </main>
   );
 }

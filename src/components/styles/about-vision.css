@@ -1,0 +1,292 @@
+.about-vision {
+  width: 100%;
+
+  padding: 22px 24px 28px;
+
+  background: #f7f4ee;
+}
+
+.about-vision-shell {
+  position: relative;
+
+  width: 100%;
+  min-height: 470px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(430px, 0.95fr);
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #020806;
+}
+
+/* =========================
+   VISUAL
+========================= */
+
+.about-vision-visual {
+  position: relative;
+
+  min-height: 470px;
+
+  overflow: hidden;
+}
+
+.about-vision-visual img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-vision-visual::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 8, 6, 0) 55%,
+      rgba(2, 8, 6, 0.28) 78%,
+      #020806 100%
+    );
+}
+
+/* =========================
+   COPY
+========================= */
+
+.about-vision-copy {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 54px 60px 54px 50px;
+}
+
+.about-vision-eyebrow {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: #18df70;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+}
+
+.about-vision-copy h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 4.4vw, 66px);
+  font-weight: 500;
+
+  line-height: 0.92;
+  letter-spacing: -0.052em;
+
+  color: #ffffff;
+}
+
+.about-vision-copy h2 span {
+  color: #18df70;
+}
+
+.about-vision-copy p {
+  max-width: 500px;
+
+  margin: 23px 0 27px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.about-vision-button {
+  width: fit-content;
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 0 23px;
+
+  border-radius: 999px;
+
+  background: #18df70;
+  color: #031008;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-vision-button:hover {
+  transform: translateY(-2px);
+
+  background: #2be77e;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+  .about-vision {
+    padding: 18px 24px 24px;
+  }
+
+  .about-vision-shell {
+    min-height: 440px;
+  }
+
+  .about-vision-visual {
+    min-height: 440px;
+  }
+
+  .about-vision-copy {
+    padding: 46px 48px 46px 42px;
+  }
+
+  .about-vision-copy h2 {
+    font-size: 56px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .about-vision {
+    padding: 20px 24px 24px;
+  }
+
+  .about-vision-shell {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-vision-copy {
+    order: 1;
+
+    width: 100%;
+
+    padding: 50px 42px 36px;
+  }
+
+  .about-vision-copy h2 {
+    font-size: clamp(50px, 8vw, 68px);
+  }
+
+  .about-vision-visual {
+    order: 2;
+
+    width: 100%;
+    min-height: 0;
+    height: 400px;
+  }
+
+  .about-vision-visual::after {
+    background:
+      linear-gradient(
+        180deg,
+        #020806 0%,
+        rgba(2, 8, 6, 0.2) 18%,
+        rgba(2, 8, 6, 0) 42%
+      );
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .about-vision {
+    padding: 0;
+
+    background: #020806;
+  }
+
+  .about-vision-shell {
+    border-radius: 0;
+  }
+
+  .about-vision-copy {
+    padding: 48px 20px 30px;
+  }
+
+  .about-vision-eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .about-vision-copy h2 {
+    font-size: clamp(41px, 12vw, 52px);
+
+    line-height: 0.94;
+  }
+
+  .about-vision-copy p {
+    margin: 20px 0 24px;
+
+    font-size: 13px;
+  }
+
+  .about-vision-button {
+    min-height: 48px;
+
+    padding: 0 20px;
+  }
+
+  .about-vision-visual {
+    height: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-vision-copy {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-vision-copy h2 {
+    font-size: 39px;
+  }
+
+  .about-vision-visual {
+    height: 290px;
+  }
+}
